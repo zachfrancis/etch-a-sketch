@@ -4,7 +4,7 @@ function createBox() {
   return div;
 }
 
-function createRow(parent, length = 16) {
+function createRow(parent, length) {
   const row = document.createElement("div");
   row.classList.add("row");
   row.style.display = "flex";
@@ -24,8 +24,8 @@ function createGrid(parent, dim = 16) {
   }
 }
 
-const container = document.querySelector(".container");
-createGrid(container);
+const sketchpad = document.querySelector(".sketchpad");
+createGrid(sketchpad);
 
 pixels = document.querySelectorAll(".pixel");
 for (const pixel of pixels) {

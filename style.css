@@ -1,11 +1,12 @@
-.container {
+.sketchpad {
   display: flex;
+  width: 960px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
-  width: 20px;
-  height: 20px;
-  margin: 2px;
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  margin: -1px;
 }
