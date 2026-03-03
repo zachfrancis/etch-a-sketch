@@ -1,14 +1,10 @@
 function createBox() {
   const div = document.createElement("div");
-  div.classList.add("square");
-  div.style.border = "1px solid black";
-  div.style.width = "100px";
-  div.style.height = "100px";
-  div.style.margin = "10px";
+  div.classList.add("pixel");
   return div;
 }
 
-function createRow(parent, length = 4) {
+function createRow(parent, length = 16) {
   const row = document.createElement("div");
   row.classList.add("row");
   row.style.display = "flex";
@@ -16,16 +12,24 @@ function createRow(parent, length = 4) {
     const square = createBox();
     row.appendChild(square);
   }
-  parent.appendChild(row);
+  return row;
 }
 
-function createGrid(parent, dim = 4) {
+function createGrid(parent, dim = 16) {
   parent.style.display = "flex";
   parent.style.flexDirection = "column";
   for (let i = 0; i < dim; i++) {
-    createRow(parent, dim);
+    const row = createRow(parent, dim);
+    parent.appendChild(row);
   }
 }
 
 const container = document.querySelector(".container");
 createGrid(container);
+
+pixels = document.querySelectorAll(".pixel");
+for (const pixel of pixels) {
+  pixel.addEventListener("mouseenter", (event) => {
+    event.target.style.backgroundColor = "black";
+  });
+}
