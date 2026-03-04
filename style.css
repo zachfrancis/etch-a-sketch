@@ -10,3 +10,15 @@
   aspect-ratio: 1 / 1;
   margin: -1px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-button {
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
