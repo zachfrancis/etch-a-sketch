@@ -2,7 +2,9 @@ function createPixel() {
   const div = document.createElement("div");
   div.classList.add("pixel");
   div.addEventListener("mouseenter", (event) => {
-    event.target.style.backgroundColor = "black";
+    let opacity = Number(event.target.style.opacity);
+    opacity < 1 ? (opacity += 0.1) : opacity;
+    event.target.style.opacity = opacity;
   });
   return div;
 }

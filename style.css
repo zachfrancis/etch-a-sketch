@@ -1,14 +1,15 @@
 .sketchpad {
   display: flex;
   width: 960px;
+  border: 1px solid black;
 }
 
 .pixel {
-  background-color: white;
-  border: 1px solid black;
+  background-color: black;
+  opacity: 0;
   flex: 1;
   aspect-ratio: 1 / 1;
-  margin: -1px;
+  margin: 0;
 }
 
 .content {
